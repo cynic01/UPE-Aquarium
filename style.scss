@@ -166,12 +166,12 @@
 }
 
 //Create random animations
-@for $i from 1 to 20 {
+@for $i from 1 to 21 {
   $randomlist: randomVList();
   @while length($randomlist) < 3 {
     $randomlist: randomVList();
   }
-  @include animation("animation" + $i, $randomlist);
+  @include animation('animation' + $i, $randomlist);
 }
 
 .particle {
@@ -181,7 +181,7 @@
   background-size: contain; //auto|length|cover|contain|initial|inherit
 }
 
-@for $i from 1 to 20 {
+@for $i from 1 to 21 {
   .elem#{$i} {
     $position: v(random(10), random(10));
     left: nth($position, 1);
@@ -227,7 +227,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #c7ddff;
-  background-image: url("image/sea.webp");
+  background-image: url('image/sea.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -285,7 +285,7 @@ body {
 }
 
 .bubble:after {
-  content: "";
+  content: '';
   position: absolute;
   background-color: white;
   width: 13px;
